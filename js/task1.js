@@ -8,7 +8,7 @@ $(function(){
 function renderNewTable(){
     var tableStart = '<table id="tableOne">';
     var tableRows = '';
-    var tableEnd = '</tr></table>';
+    var tableEnd = '</table>';
     for (var i = 1; i < 101; i++){
         if (parseFloat((i-1)/10) == parseInt((i-1)/10)){
             tableRows += '<tr><td>' + i + '</td>';
