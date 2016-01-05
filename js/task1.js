@@ -13,13 +13,14 @@ function renderNewTable(){
         tableRows += '<tr>';
         for (var k = 1; k <= 10; k++){
             var tdColour = '';
-            if (((i-1)*10+k)%3 == 0){
+            var count = ((i-1)*10+k);
+            if (count%3 == 0){
                 tdColour = 'tdYellow';
             }
-            else if (((i-1)*10+k)%2 != 0){
+            else if (count%2 != 0){
                 tdColour = 'tdRed';
             }
-            tableRows += '<td class="' + tdColour + '">' + ((i-1)*10+k) + '</td>';
+            tableRows += '<td class="' + tdColour + '">' + count + '</td>';
         }
     }
     var tableRender = tableStart + tableRows + tableEnd;
