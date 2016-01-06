@@ -25,57 +25,38 @@ function calculation(){
         }
     }
 
-    if (stringArr.indexOf('*')){
-        for (var j = 0; j < stringArr.length; j++){
-            numberForCount = Number(numberForCount)+((Number(stringArr[stringArr.indexOf('*')-1])*Number(stringArr[stringArr.indexOf('*')+1])));
-            stringArr[stringArr.indexOf('*')-1] = '';
-            stringArr[stringArr.indexOf('*')+1] = '';
-            stringArr[stringArr.indexOf('*')] = '';
-            if (stringArr.indexOf('*') < 1){
-                j=stringArr.length;
+    while (stringArr.length > 1){
+        if (stringArr.indexOf('*') && stringArr.indexOf('*') != -1 || stringArr.indexOf('/') && stringArr.indexOf('/') != -1){
+            if (stringArr.indexOf('*') < stringArr.indexOf('/') && stringArr.indexOf('*') != -1 || stringArr.indexOf('/') == -1 || stringArr.indexOf('/') == false){
+                for (var j = 0; j < stringArr.length; j++){
+                    var tempIndex = Number(stringArr.indexOf('*'));
+                    numberForCount = (stringArr[tempIndex-1])*(stringArr[tempIndex+1]);
+                    stringArr.splice(tempIndex-1,3,numberForCount);
+                    if (stringArr.indexOf('*') == -1 || stringArr.indexOf('/') < stringArr.indexOf('*') && stringArr.indexOf('/') != -1){
+                        j=stringArr.length;
+                    }
+                }
+            }
+            else {
+                for (var j = 0; j < stringArr.length; j++){
+                    var tempIndex = Number(stringArr.indexOf('/'));
+                    numberForCount = (stringArr[tempIndex-1])/(stringArr[tempIndex+1]);
+                    stringArr.splice(tempIndex-1,3,numberForCount);
+                    if (stringArr.indexOf('/') == -1 || stringArr.indexOf('*') < stringArr.indexOf('/') && stringArr.indexOf('*') != -1){
+                        j=stringArr.length;
+                    }
+                }
+            }
+        }
+        else if (stringArr.length > 1){
+            for (var j = 0; j < stringArr.length; j++){
+                numberForCount = Number(stringArr[0])+(Number(stringArr[1]+stringArr[2]));
+                stringArr.splice(0,3,numberForCount);
+                if (stringArr.length == 1){
+                    j=stringArr.length;
+                }
             }
         }
     }
-
-    alert(inputString + '<--input ' + stringArr + '<--parse ' + numberForCount + '');
-}
-
-
-
-
-function tempFunc(){
-    var inputString = document.getElementById('calcInput').value;
-    var result = 0;
-    var numberForCount = '';
-    for (var i = 0; i < inputString.length; i++) {
-        if (inputString[i] === '+') {
-            result += Number(numberForCount);
-            numberForCount = '+';
-        }
-        else if (inputString[i] === '-'){
-            result += Number(numberForCount);
-            numberForCount = '-';
-        }
-        else {
-            numberForCount += inputString[i];
-        }
-    }
-    result += Number(numberForCount);
-    alert(inputString + ' = ' + result);
-
-
-    for (var i = 0; i < inputString.length; i++) {
-        if (inputString[i] === '+') {
-            result += Number(numberForCount);
-            numberForCount = '+';
-        }
-        else if (inputString[i] === '-'){
-            result += Number(numberForCount);
-            numberForCount = '-';
-        }
-        else {
-            numberForCount += inputString[i];
-        }
-    }
-    result += Number(numberForCount);
+    alert(inputString + '<--input ' + ', result--> = ' + stringArr[0]);
 }
