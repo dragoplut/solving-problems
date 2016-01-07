@@ -1,8 +1,15 @@
 /**
  * Created by oleksandr on 05.01.16.
  */
-function calculation(){
-    var inputString = document.getElementById('calcInput').value;
+function inputValue(){
+    var someString = document.getElementById('calcInput').value;
+    var result = calculateString(someString);
+    console.log(result);
+    alert(result);
+}
+
+function calculateString(someSring){
+    var inputString = someSring;
     var k = 0;
     var numberForCount = '';
     var result = '';
@@ -58,5 +65,5 @@ function calculation(){
             }
         }
     }
-    alert(inputString + '<--input ' + ', result--> = ' + stringArr[0]);
+    return(stringArr[0]);
 }
