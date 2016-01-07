@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c43b3401-fda2-4ec6-8510-204718f61c6d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/task2.js" afterPath="$PROJECT_DIR$/js/task2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task2calc.html" afterPath="$PROJECT_DIR$/task2calc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="solv.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +37,8 @@
       <file leaf-file-name="task2.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/task2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16380656">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5850234">
+              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
               <folding>
                 <element signature="n#!!doc;n#inputValue#0" expanded="false" />
               </folding>
@@ -78,8 +76,8 @@
         <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/task1.html" />
         <option value="$PROJECT_DIR$/js/task1.js" />
-        <option value="$PROJECT_DIR$/js/task2.js" />
         <option value="$PROJECT_DIR$/task2calc.html" />
+        <option value="$PROJECT_DIR$/js/task2.js" />
       </list>
     </option>
   </component>
@@ -411,8 +409,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/task2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16380656">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5850234">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
           <folding>
             <element signature="n#!!doc;n#inputValue#0" expanded="false" />
           </folding>

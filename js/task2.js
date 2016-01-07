@@ -8,11 +8,10 @@ function inputValue(){
     alert(result);
 }
 
-function calculateString(someSring){
+function calculateString(someSring){ //calculates input string, allowed:  0123456789.+-*/  returns: "result" ;
     var inputString = someSring;
     var k = 0;
     var numberForCount = '';
-    var result = '';
     var stringArr = [];
     for (var i = 0; i < inputString.length; i++){
         if (inputString[i] === '+' || inputString[i] === '-' || inputString[i] === '*' || inputString[i] === '/') {
@@ -33,7 +32,7 @@ function calculateString(someSring){
     }
 
     while (stringArr.length > 1){
-        if (stringArr.indexOf('*') && stringArr.indexOf('*') != -1 || stringArr.indexOf('/') && stringArr.indexOf('/') != -1){
+        if (stringArr.indexOf('*') > 0 || stringArr.indexOf('/') > 0){
             if (stringArr.indexOf('*') < stringArr.indexOf('/') && stringArr.indexOf('*') != -1 || stringArr.indexOf('/') == -1 || stringArr.indexOf('/') == false){
                 for (var j = 0; j < stringArr.length; j++){
                     var tempIndex = Number(stringArr.indexOf('*'));
