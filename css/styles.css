@@ -1,3 +1,36 @@
+.calcBorder{
+    border: 3px outset gray;
+    background: gainsboro;
+    left: 50%;
+    margin: -50px 0 0 -100px;
+    padding: 8px;
+    position: absolute;
+    top: 10%;
+    height: 30%;
+    width: 30%;
+}
+.calcButtons{
+    margin: 1px;
+    margin-bottom: 2px;
+    position: relative;
+    text-align: center;
+    height: 16%;
+    width: 22.3%;
+}
+.calcBrackets{
+    width: 9.6%;
+}
+.calcAct{
+    width: 47.8%;
+}
+.calcInput{
+    margin: 1px;
+    margin-bottom: 4px;
+    position: relative;
+    text-align: right;
+    height: 10%;
+    width: 98%;
+}
 .tdRed{
     background-color: red;
 }

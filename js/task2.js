@@ -1,11 +1,13 @@
 /**
  * Created by oleksandr on 05.01.16.
  */
-function inputValue(){
-    var someString = document.getElementById('calcInput').value;
-    var result = processingBrackets(someString);
-    console.log(result);
-    alert(result);
+
+/**
+ * Add string value to existing input value from calc buttons
+ * @param someString
+ */
+function addToInput(someString){
+    document.getElementById('calcInput').value += someString;
 }
 
 /**
@@ -50,6 +52,30 @@ function calculateNewArray(someArray){
         }
     }
     return(stringArr[0]);
+}
+
+/**
+ * Calculates input value, using other functions.
+ * print out 'result' in console & alert
+ */
+function inputValue(){
+    var someString = document.getElementById('calcInput').value;
+    var result = processingBrackets(someString);
+    console.log(result);
+    alert(result);
+}
+
+function resetInput(){
+    document.getElementById('calcInput').value = '';
+}
+
+/**
+ * Calculates input value, using other functions.
+ * result: input.value = result
+ */
+function calculateResult(){
+    var result = processingBrackets(document.getElementById('calcInput').value);
+    document.getElementById('calcInput').value = result;
 }
 
 /**
