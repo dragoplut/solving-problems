@@ -8,7 +8,12 @@ function inputValue(){
     alert(result);
 }
 
-function calculateNewArray(someArray){ //calculates input array, allowed:  0123456789.+-*/  returns: "result" ;
+/**
+ * Calculates input array, allowed:  *0123456789.+-/  returns: "result"
+ * @param someArray
+ * @returns {*}
+ */
+function calculateNewArray(someArray){
     var numberForCount = '';
     var stringArr = someArray;
     while (stringArr.length > 1){
@@ -47,7 +52,12 @@ function calculateNewArray(someArray){ //calculates input array, allowed:  01234
     return(stringArr[0]);
 }
 
-function stringToArr(someString){   // convert string to math split array, allowed: 0123456789()+-*/  , returns: array
+/**
+ * Convert string to math split array, allowed: *0123456789()+-/
+ * @param someString
+ * @returns {Array}
+ */
+function stringToArr(someString){
     var inputString = someString;
     var k = 0;
     var stringArr = [];
@@ -85,7 +95,13 @@ function stringToArr(someString){   // convert string to math split array, allow
     return(stringArr);
 }
 
-function processingBrackets (someString){   // calculates input string "with brackets", returns: result. Warning!!! Needed functions: stringToArr(someString) && calculateNewArray(someArray)
+/**
+ * Calculates input string "with brackets", returns: result.
+ * Warning!!! Needed functions: stringToArr(someString) && calculateNewArray(someArray)
+ * @param someString
+ * @returns {string}
+ */
+function processingBrackets (someString){
     var inputArr = stringToArr(someString);
     var stringArr = [];
     var firstCloseBracket = inputArr.indexOf(')');
