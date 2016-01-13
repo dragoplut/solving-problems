@@ -2,10 +2,12 @@
     border: 3px outset gray;
     background: gainsboro;
     left: 50%;
-    margin: -50px 0 0 -100px;
+    margin: 0 0 0 -100px;
+    min-height: 190px;
+    min-width: 210px;
     padding: 8px;
     position: absolute;
-    top: 10%;
+    top: 5%;
     height: 30%;
     width: 30%;
 }
